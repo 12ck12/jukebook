@@ -1,0 +1,14 @@
+{% extends "common_layout.html" %}
+{% block title %} All Works {% endblock %}
+
+{% block container %}
+
+<h1 class="title is-1">All Works</h1>
+<table id="myTable">
+    <tr><th><b>Title</b></th><th><b>Artist</b></th><th><b>Genre</b></th><th><b>Type</b></th></tr>
+    {% for titre, genre, idG, idA, artiste, idT, type in oeuvres %}
+        <tr><td>{{ titre }}</td><td>{{ artiste }}</td><td>{{ genre }}</td><td>{{type}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

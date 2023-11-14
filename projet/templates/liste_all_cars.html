@@ -1,0 +1,15 @@
+{% extends "common_layout.html" %}
+{% block title %} All Caracteristics {% endblock %}
+
+{% block container %}
+
+<h1>All Caracteristics</h1>
+<table id="myTable">
+    <tr><th><b>Id Work</b></th><th>id Keyword</th>
+    {% for idO, idK %}
+        <tr><td>{{ idO }}</td><td>{{ idK }}</td></tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

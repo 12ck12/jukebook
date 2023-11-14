@@ -1,0 +1,16 @@
+{% extends "common_layout.html" %}
+{% block title %} Caracteristics  {% endblock %}
+
+{% block container %}
+
+
+<h1 class="title is-1">Caracteristics</h1>
+
+<table id="myTable">
+    <tr><th><b>Title</b></th><th><b>Music Key</b></th><th><b>Book Key</b></th>
+    {% for id, titre, idO, idKey, KeyM, KeyL in car %}
+        <tr><td>{{ titre }}</td><td>{{KeyM}}</td><td>{{KeyL}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "common_layout.html" %}
+{% block title %} Artists {% endblock %}
+
+{% block container %}
+
+
+<h1>Artists</h1>
+
+<table id="myTable">
+        <tr><th>Name</th><th>Domain</th>
+    {% for nom, type, idT in artistes %}
+        <tr><td>{{ nom }}</td><td>{{type}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

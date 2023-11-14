@@ -1,0 +1,16 @@
+{% extends "common_layout.html" %}
+{% block title %} Genres {% endblock %}
+
+{% block container %}
+
+
+<h1>Genres</h1>
+
+<table id="myTable">
+   <tr><th><b>Genre</b></th><th><b>Domain</b></th>
+    {% for nom, type, idT in genres %}
+        <tr><td>{{ nom }}</td><td>{{type}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

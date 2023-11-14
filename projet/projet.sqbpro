@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/christykhairallah/Documents/projet/projet.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1453"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- INSERT INTO Artiste VALUES (47, 'Suki Waterhouse', 1);
+-- INSERT INTO Oeuvre VALUES (48, &quot;Good Looking&quot;, 6, 47, 1);
+-- INSERT INTO acommecaracteristique VALUES (48, 4);
+-- INSERT INTO acommecaracteristique VALUES (48, 5);
+-- INSERT INTO acommecaracteristique VALUES (48,10);
+
+SELECT acommecaracteristique.id_Oeuvre, oeuvre.titre, oeuvre.id, acommecaracteristique.id_Keywords, (SELECT Keywords.KeyMusique from Keywords WHERE acommecaracteristique.id_Keywords=Keywords.id AND oeuvre.id_type=1), (SELECT Keywords.KeyLivre from Keywords WHERE acommecaracteristique.id_Keywords=keywords.id AND oeuvre.id_type=2) from acommecaracteristique inner join oeuvre on acommecaracteristique.id_Oeuvre=oeuvre.id</sql><current_tab id="0"/></tab_sql></sqlb_project>

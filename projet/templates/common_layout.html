@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='gen.css') }}">
+</head>
+
+<header>
+  <div class="navbar">
+      <div id="logo">
+        <img src="{{ url_for('static', filename='logo-long.png') }}"/>
+      </div>
+  </div>
+</header>
+
+
+{% block content %}
+              <!-- SECTION ET CONTAINER                                     -->
+  <section>
+    <div class="container-content">
+    {% block container %}
+    {% endblock %}
+    </div>
+  </section>
+{% endblock %}
+</body>
+</html>

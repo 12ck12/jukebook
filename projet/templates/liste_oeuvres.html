@@ -1,0 +1,16 @@
+{% extends "common_layout.html" %}
+{% block title %} Liste de bla {% endblock %}
+
+{% block container %}
+
+
+<h1 class="title is-1">Liste de bla</h1>
+
+<table id="myTable">
+    <tr><th><b>Titre</b></th><th><b>Auteur</b></th><th><b>Type</b></th><th><b>Genre</b></th>
+    {% for titre, idA, auteur, type, genre in oeuvres %}
+        <tr><td>{{ titre }}</td><td>{{auteur}}</td><td>{{type}}</td><td>{{genre}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

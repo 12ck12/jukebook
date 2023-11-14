@@ -1,0 +1,16 @@
+{% extends "common_layout.html" %}
+{% block title %} Keywords {% endblock %}
+
+{% block container %}
+
+
+<h1 class="title is-1">Keywords</h1>
+
+<table id="myTable">
+    <tr><th><b>Id</b></th><th><b>Music</b></th><th><b>Books</b></th>
+    {% for id, musique, livre in keys %}
+        <tr><td>{{ id }}</td><td>{{musique}}</td><td>{{livre}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
